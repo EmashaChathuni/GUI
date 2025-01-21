@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    position: fixed;
+  }
+.services {
+  
+  top: 0; /* Position it at the top */
+  left: 0; /* Position it at the left */
+  right: 0; 
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto; /* Center the services section */
+  background-color:black; /* Light background for contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow-y: auto;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color:;
+}
+
+.services p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.service-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.service-icons i {
+  font-size: 2rem;
+  color: #ff6600;
+  transition: color 0.3s ease;
+  
+}
+
+.service-icons i:hover {
+  color: #e65c00;
+}
+.button {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 1rem;
+    width: 150px;
+  }
+  
+  .button:hover {
+    background-color: #e68a00;
+  }
+
+  
+  .service-icons {
+    
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    text-align: center;
+    flex-wrap: wrap;
+    gap:1rem;
+    justify-content: center;
+    display: flex;
+  margin-top: 1rem;
+}
+.special-offers {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.offer-box {
+  flex: 1;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.offer-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.offer-box .content {
+  padding: 15px;
+}
+
+.offer-box .content h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+}
+
+.offer-box .content p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+  
+
+  

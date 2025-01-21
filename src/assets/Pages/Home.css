@@ -1,0 +1,110 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Home {
+  width: 100vw;
+  height: 100vh; /* Full viewport height */
+  overflow-x: hidden; /* Allows scrolling */
+  }
+
+/* Full-screen background video */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Ensures the video covers the entire container */
+  z-index: -1; /* Places the video behind the content */
+}
+
+/* Content overlay */
+.content {
+  z-index: 1;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Heading and paragraph styling */
+.content h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.content p {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+/* Button styling */
+.button {
+  background-color: #7eb56e;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 1rem;
+  width: 150px;
+}
+
+.button:hover {
+  background-color: #7eb56e;
+}
+
+.search-container {
+  justify-content: center;
+  
+  margin-top: 20px;
+}
+.home-container {
+
+  width: 100%;
+  background-color: black; /* Light background for visibility */
+  padding: 10px 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* Black background */
+  font-family: Arial, sans-serif;
+}
+
+.marquee {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  height: 80px; /* Adjust height as needed */
+  border: 2px solid #fff; /* Optional: white border */
+}
+
+.marquee p {
+  display: flex;
+  font-size: 36px; /* Adjust font size as needed */
+  font-weight: bold;
+  color: white;
+  animation: scroll 20s linear infinite; /* Adjust duration for speed */
+  padding-left: 100%; /* Start position */
+  margin: 0; /* Remove default margin */
+}
+
+/* Keyframes for scrolling effect */
+@keyframes scroll {
+  0% {
+    transform: translateX(100%); /* Start outside the right edge */
+  }
+  100% {
+    transform: translateX(-100%); /* End outside the left edge */
+  }
+}
