@@ -19,19 +19,19 @@ body {
   background-color:black; /* Light background for contrast */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  overflow-y: auto;
+  overflow-y:auto;
 }
 
 .services h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color:;
+  color: white;
 }
 
 .services p {
   font-size: 1rem;
   line-height: 1.6;
-  color: black;
+  color: white;
   margin-bottom: 1rem;
 }
 
@@ -53,75 +53,95 @@ body {
 .service-icons i:hover {
   color: #e65c00;
 }
-.button {
-    background-color: #ff9800;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 1rem;
-    width: 150px;
-  }
-  
-  .button:hover {
-    background-color: #e68a00;
-  }
 
   
-  .service-icons {
+  .service-icons box{
     
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
+    flex-direction: row;
+   padding: 1rem;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 150px;
     text-align: center;
-    flex-wrap: wrap;
-    gap:1rem;
-    justify-content: center;
-    display: flex;
-  margin-top: 1rem;
+   gap:1rem;
+  display: flex;
+  margin-left: 1rem;
+  ;
 }
 .special-offers {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: center;
+  width:90vw;
+  margin-left: 50px;
 }
 
 .offer-box {
   flex: 1;
-  background: #fff;
+  background:black;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  height: 700px;
+  width: 50%;
 }
 
 .offer-box img {
-  width: 100%;
-  height: 200px;
+  
+  width: 80%;
+  height: 350px;
   object-fit: cover;
 }
 
-.offer-box .content {
-  padding: 15px;
+
+.tours-container {
+  margin-top: 01px;
+  padding: 20px;
+  width:90vw;
+  background-color:black;
+  border-radius: 05px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  text-align: left;
 }
 
-.offer-box .content h3 {
-  margin: 0 0 10px;
-  font-size: 1.2rem;
+.tours-title {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
-.offer-box .content p {
-  font-size: 0.9rem;
-  color: #555;
+.tours-description {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: justify;
 }
+
+.tours-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.tours-list li {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.tours-container p:last-of-type {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
 
   
 

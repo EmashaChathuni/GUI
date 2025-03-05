@@ -4,7 +4,7 @@ import './TourPackages.css';
 const attractions = [
 {
     name: "Sigiriya Rock Fortress",
-    image: "Images/sigiriya.jpg",
+    image: "Images/Sigiriya.jpg",
     description: "A UNESCO World Heritage site and iconic landmark.",
   },
   {
@@ -30,9 +30,9 @@ const attractions = [
   },
   
   {
-    name: "Ella Rock",
-    image: "Images/ellarock.jpg",
-    description: "A scenic hiking destination with breathtaking views.",
+    name: "Nine Arch",
+    image: "Images/ninearch.jpg",
+    description: "A stunning architectural marvel offering picturesque views ",
   },
   {
     name: "Mirissa",

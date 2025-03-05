@@ -52,6 +52,11 @@ main {
   font-size: 18px;
   margin-bottom: 10px;
 }
+.footer-column p {
+  font-size: 12px;
+  margin-bottom: 16px;
+  color: white;
+}
 
 .footer-column ul {
   list-style: none;

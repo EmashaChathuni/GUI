@@ -21,6 +21,9 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     text-align: center;
   }
+  .signup-card label{
+    color: white;
+  }
   
   .signup-card h2 {
     text-align: center;

@@ -31,10 +31,16 @@
  font-size: 24px;
 
 }
+.login-card label{
+  
+  color: white;
+  
+}
 
 .login-card form {
   display: flex;
   flex-direction: column;
+
 }
 
 .login-card input {

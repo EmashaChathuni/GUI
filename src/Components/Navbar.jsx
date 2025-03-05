@@ -28,6 +28,12 @@ const NavbarComponent = () => {
           <li className="Navbar-item">
             <Link to="/services">Services</Link>
           </li>
+          <li className="Navbar-item">
+            <Link to="/ContactUs">ContactUs</Link>
+          </li>
+          <li className="Navbar-item">
+            <Link to="/TourGuides">TourGuides</Link>
+          </li>
           
         </ul>
       </div>

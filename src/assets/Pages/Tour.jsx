@@ -13,6 +13,7 @@ import kandy from '../Images/kandy.jpeg';
 import galle from '../Images/galle.jpg';
 import nuwaraeliya from '../Images/nuwaraeliya.jpg';
 import Nationalpark from '../../Components/Nationalpark';
+import AboutSriLanka from '../../Components/AboutSrilanka';
 
 
 const Tour = () => {
@@ -66,7 +67,7 @@ const Tour = () => {
       <div className="background-container">
         <h2>Let Us Show You The Beauty Of The SriLanka</h2>
       </div>
-
+<AboutSriLanka/>
       <div className='horizontal-section'>
         <div className='Tour-content' onClick={() => handleTourClick('city')}>
       <img src={citytour} />
@@ -111,7 +112,8 @@ const Tour = () => {
         <div className='Tour-details'>
           <div className="destinations">
       <h2>Top Destinations</h2>
-      <p>Details about Nature Tours...</p>
+      
+    <div class="row">
       <div className="destination-item">
         <div className='destination-item-container'>
       <img src= {yala} alt="National Parks" />
@@ -149,20 +151,24 @@ const Tour = () => {
             </select>
     </div>
     </div>
+    </div>
         </div>
       )}
       {selectedTour === 'cultural' && (
         <div className='Tour-details'>
-          <h3>Cultural Tours Details</h3>
-          <p>Details about Cultural Tours...</p>
-          <div className='Tour-destinatation'>
-            <img src="/images/katharagama.jpg"/>
-            <img src="/images/example.jpg"/>
-            <img src="/images/example.jpg"/>
-            <img src="/images/example.jpg"/>
-            <img src="/images/example.jpg"/>
-            <img src="/images/example.jpg"/>
-            
+          <div className='destinations'>
+          <h2>Cultural Tours Details</h2>
+          
+          <div className='cultural-destination'>
+            <img src="/Images/katharagama.jpg"/>
+            <img src="/Images/redchruch.jpg"/>
+            <img src="/Images/nallur.jpg"/>
+            <img src="/Images/perahara.jpg"/>
+            <img src="/Images/anuradhapuraya.jpg"/>
+            <img src="/Images/sigiriyaart.jpg"/>
+            <img src="/Images/polonnaruwa.jpg"/>
+            <img src="/Images/dhambulla.jpg"/>
+           </div> 
             </div>
           
         </div>

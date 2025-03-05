@@ -2,7 +2,7 @@
 import React from 'react';
 import './Home.css';
 import srilanka from '../images/srilanka.mp4';
-import Search from '../../Components/Search';
+import SearchBar from '../../Components/SearchBar';
 import { Container, Row, Col } from "react-bootstrap";
 import Features from '../../Components/Features';
 import TourPackages from '../../Components/TourPackages';
@@ -21,19 +21,15 @@ const Home = () => {
             
             {/* Overlay */}
             <div className="overlay"></div>
-
             {/* Content Section */}
             <div className="content">
               <h1>Welcome </h1>
               <h2>Explore Sri Lanka with Expert Guide</h2>
               <p>Your journey begins here. Discover the beauty, history, and culture of Sri Lanka.</p>
-              <button className="button">Explore</button>
+              
             </div>
-
-            {/* Search Component */}
-            <div className="search-container">
-              <Search />
-            </div>
+            <SearchBar />
+            
             <div className="home-container">
       <div className="marquee">
         <p>
@@ -46,6 +42,7 @@ const Home = () => {
           </Col>
         </Row>
       </Container>
+      
     </div>
   );
 };

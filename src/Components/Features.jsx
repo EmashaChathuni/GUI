@@ -3,10 +3,10 @@ import './Features.css';
 
 const Features = () => {
   const features = [
-    { id: 1, title: 'Tour Packages', text: 'Explore the beauty of Sri Lanka with our curated tour packages, offering unforgettable experiences from pristine beaches to lush tea plantations. ' },
-    { id: 2, title: 'Flight Booking', text: 'Find and book the best flights for your journey, ensuring a smooth and comfortable travel experience.' },
-    { id: 3, title: 'Hotel Booking', text: 'Choose from a variety of accommodations to suit your needs, from luxury hotels to budget-friendly options.' },
-    { id: 4, title: 'Destination Booking', text:' Plan your trip to incredible destinations with ease and discover vibrant cultures, historical sites, and stunning landscapes.' },
+    { id: 1, title: 'Discover Sri Lanka’s Best Destinations', text: 'Explore the rich culture, history, and natural beauty of Sri Lanka through detailed destination profiles. From ancient temples to pristine beaches, this app guides you to the most iconic places across the island.'},
+    { id: 2, title: 'Personalized Travel Recommendations', text: 'Tailor your travel experience based on your interests. Whether you’re into adventure, history, or nature, our app suggests destinations and activities that match your preferences for a truly unique journey.'},
+    { id: 3, title: 'Local Insights & Travel Tips', text: 'Gain insider knowledge on Sri Lanka’s culture, must-try foods, and local festivals. Our app provides helpful tips to make your travel experience smooth and enriching, ensuring you make the most of your visit.'},
+    { id: 4, title: 'Plan Your Perfect Itinerary', text:'Easily create and customize your travel itinerary. Choose your destinations, activities, and accommodations, and let our app help you organize a seamless trip that fits your schedule and budget. ' },
   ];
 
   return (
