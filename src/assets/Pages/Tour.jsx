@@ -78,7 +78,7 @@ const Tour = () => {
     { name: 'Adam’s Peak', url: 'https://www.srilanka.travel/mountains/adams-peak' },
     { name: 'Pidurutalagala', url: 'https://www.srilanka.travel/mountains/pidurutalagala' },
     { name: 'Kirigalpotta', url: 'https://www.trekking.lk/kirigalpotta' },
-    { name: 'Thotupola Kanda', url: 'https://www.srilanka.travel/mountains/thotupola-kanda' },in
+    { name: 'Thotupola Kanda', url: 'https://www.srilanka.travel/mountains/thotupola-kanda' },
     { name: 'Knuckles Mountain Range', url: 'https://www.srilanka.travel/mountains/knuckles-mountain-range' },
     { name: 'Hanthana Mountain Range', url: 'https://www.srilanka.travel/mountains/hanthana-mountain-range' }
   ];
