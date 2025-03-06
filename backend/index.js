@@ -2,9 +2,10 @@ import express, { request, response } from "express";
 import { PORT, MONGOURL } from "./config.js";
 import mongoose from "mongoose";
 import userRoutes from "./routes/userRoutes.js";
+import cors from "cors";
  
 const app = express()
-
+app.use(cors());
 app.use(express.json());
 
 mongoose.connect(MONGOURL).then(() => {

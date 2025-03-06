@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Signup.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 const Sign_up = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: '',
     email: '',
-    phone: '',
+    mnumber: '',
     password: '',
   });
 
@@ -26,16 +28,18 @@ const Sign_up = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/users/addusers'
+      const response = await axios.post('http://localhost:3000/api/users/adduser'
+
 , formData);
       if (response.status === 200) {
         setMessage({ success: 'User registered successfully!', error: '' });
         setFormData({
           username: '',
           email: '',
-          phone: '',
+          mnumber: '',
           password: '',
         });
+	navigate('/TourGuides');
       }
     } catch (err) {
       setMessage({
@@ -78,9 +82,9 @@ const Sign_up = () => {
             <label htmlFor="phone">Mobile Number:</label>
             <input
               type="text"
-              id="phone"
-              name="phone"
-              value={formData.phone}
+              id="mnumber"
+              name="mnumber"
+              value={formData.mnumber}
               onChange={handleChange}
               required
             />
