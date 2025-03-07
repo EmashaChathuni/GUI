@@ -14,7 +14,7 @@ body {
   padding: 20px;
   border: 1px solid #ddd;
   width: 100vw;
-  height: 100vh;
+  height: 30vh;
   margin: 0 auto; /* Center the services section */
   background-color:black; /* Light background for contrast */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

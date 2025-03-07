@@ -8,7 +8,6 @@ import Tour from './assets/Pages/Tour';
 import Service from './assets/Pages/Service';
 import About from './assets/Pages/About';
 import Footer from './Components/Footer';
-import ContactUs from './assets/Pages/ContactUs';
 import TourGuides from './assets/Pages/TourGuides'; 
 
 
@@ -28,8 +27,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} /> 
         <Route path="/sign_up" element={<Sign_up/>}/>
-        <Route path="/ContactUs" element={<ContactUs/>}/>
-        <Route path="/TourGuides" element={<TourGuides/>}/>
+       <Route path="/TourGuides" element={<TourGuides/>}/>
     
         </Routes>
 

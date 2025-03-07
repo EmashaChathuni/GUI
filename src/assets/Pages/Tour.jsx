@@ -59,37 +59,37 @@ const Tour = () => {
   const parks = [
     { name: 'Yala National Park', url: 'https://www.yalasrilanka.lk/' },
     { name: 'Udawalawe National Park', url: 'https://udawalawesafari.lk/' },
-    { name: 'Minneriya National Park', url: 'https://www.srilanka.travel/national_parks/minneriya-national-park' },
-    { name: 'Wilpattu National Park', url: 'https://www.srilanka.travel/national_parks/wilpattu-national-park' },
-    { name: 'Kumana National Park', url: 'https://www.srilanka.travel/national_parks/kumana-national-park' },
-    { name: 'Horton Plains National Park', url: 'https://www.srilanka.travel/national_parks/horton-plains-national-park' }
+    { name: 'Minneriya National Park', url: 'https://minneriyasafari.com/about/' },
+    { name: 'Wilpattu National Park', url: 'https://en.m.wikipedia.org/wiki/Wilpattu_National_Park' },
+    { name: 'Kumana National Park', url: 'https://en.wikipedia.org/wiki/Kumana_National_Park' },
+    { name: 'Horton Plains National Park', url: 'https://en.m.wikipedia.org/wiki/Horton_Plains_National_Park' }
   ];
 
   const Waterfalls = [
-    { name: 'Diyaluma Falls', url: 'https://www.srilanka.travel/waterfalls/diyaluma-falls' },
-    { name: 'Bambarakanda Falls', url: 'https://www.srilanka.travel/waterfalls/bambarakanda-falls' },
-    { name: 'Dunhinda Falls', url: 'https://www.srilanka.travel/waterfalls/dunhinda-falls' },
-    { name: 'Ravana Falls', url: 'https://www.srilanka.travel/waterfalls/ravana-falls' },
-    { name: 'St. Clair’s Falls', url: 'https://www.srilanka.travel/waterfalls/st-clairs-falls' },
-    { name: 'Bopath Falls', url: 'https://www.srilanka.travel/waterfalls/bopath-falls' }
+    { name: 'Diyaluma Falls', url: 'https://en.m.wikipedia.org/wiki/Diyaluma_Falls' },
+    { name: 'Bambarakanda Falls', url: 'https://en.m.wikipedia.org/wiki/Bambarakanda_Falls' },
+    { name: 'Dunhinda Falls', url: 'https://en.m.wikipedia.org/wiki/Dunhinda_Falls' },
+    { name: 'Ravana Falls', url: 'https://en.m.wikipedia.org/wiki/Ravana_Falls' },
+    { name: 'St. Clair’s Falls', url: 'https://en.m.wikipedia.org/wiki/St._Clair%27s_Falls' },
+    { name: 'Bopath Falls', url: 'https://en.m.wikipedia.org/wiki/Bopath_Ella_Falls' }
   ];
 
   const Mountains = [
-    { name: 'Adam’s Peak', url: 'https://www.srilanka.travel/mountains/adams-peak' },
-    { name: 'Pidurutalagala', url: 'https://www.srilanka.travel/mountains/pidurutalagala' },
-    { name: 'Kirigalpotta', url: 'https://www.trekking.lk/kirigalpotta' },
-    { name: 'Thotupola Kanda', url: 'https://www.srilanka.travel/mountains/thotupola-kanda' },
-    { name: 'Knuckles Mountain Range', url: 'https://www.srilanka.travel/mountains/knuckles-mountain-range' },
-    { name: 'Hanthana Mountain Range', url: 'https://www.srilanka.travel/mountains/hanthana-mountain-range' }
+    { name: 'Adam’s Peak', url: 'https://en.m.wikipedia.org/wiki/Adam%27s_Peak' },
+    { name: 'Pidurutalagala', url: 'https://en.m.wikipedia.org/wiki/Pidurutalagala' },
+    { name: 'Kirigalpotta', url: 'https://en.m.wikipedia.org/wiki/Kirigalpotta' },
+    { name: 'Thotupola Kanda', url: 'https://en.m.wikipedia.org/wiki/Totapolakanda' },
+    { name: 'Knuckles Mountain Range', url: 'https://en.m.wikipedia.org/wiki/Knuckles_Mountain_Range' },
+    { name: 'Hanthana Mountain Range', url: 'https://en.m.wikipedia.org/wiki/Hanthana_Mountain_Range' }
   ];
 
   const cityDestinations = [
-    { name: 'Colombo', img: colombo, url: 'https://www.srilanka.travel/colombo' },
-    { name: 'Galle', img: galle, url: 'https://www.srilanka.travel/galle' },
-    { name: 'Ella', img: ella, url: 'https://www.srilanka.travel/ella' },
-    { name: 'Kandy', img: kandy, url: 'https://www.srilanka.travel/kandy' },
-    { name: 'Negombo', img: negombo, url: 'https://www.srilanka.travel/negombo' },
-    { name: 'Nuwara Eliya', img: nuwaraeliya, url: 'https://www.srilanka.travel/nuwara-eliya' }
+    { name: 'Colombo', img: colombo, url: 'https://www.goindigo.in/international-destinations/colombo.html' },
+    { name: 'Galle', img: galle, url: 'https://www.holidify.com/places/galle/sightseeing-and-things-to-do.html' },
+    { name: 'Ella', img: ella, url: 'https://www.thrillophilia.com/destinations/ella/places-to-visit' },
+    { name: 'Kandy', img: kandy, url: 'https://www.lovesrilanka.org/destinations/kandy/attractions/' },
+    { name: 'Negombo', img: negombo, url: 'https://www.lovesrilanka.org/destinations/negombo/attractions/' },
+    { name: 'Nuwara Eliya', img: nuwaraeliya, url: 'https://traveltriangle.com/blog/places-to-visit-in-nuwara-eliya/' }
   ];
 
   return (
@@ -117,6 +117,8 @@ const Tour = () => {
           <p>Experience the rich cultural heritage of Sri Lanka.</p>
         </div>
       </div>
+
+    
 
       {selectedTour === 'city' && (
         <div className='Tour-details'>
@@ -205,34 +207,38 @@ const Tour = () => {
           <div className='destinations'>
             <h2>Cultural Tours Details</h2>
             <div className='cultural-destination'>
-              <a href="https://www.srilanka.travel/katharagama" target="_blank" rel="noopener noreferrer">
+              <a href="https://dayouting.lk/visit/Uva/province/Monaragala/district/Kataragama/city/Places-To-Visit" target="_blank" rel="noopener noreferrer">
                 <img src="/Images/katharagama.jpg" title="Katharagama" />
               </a>
-              <a href="https://www.srilanka.travel/redchruch" target="_blank" rel="noopener noreferrer">
+              <a href="https://en.wikipedia.org/wiki/Jami_Ul-Alfar_Mosque" target="_blank" rel="noopener noreferrer">
                 <img src="/Images/redchruch.jpg" title="Red Church" />
               </a>
-              <a href="https://www.srilanka.travel/nallur" target="_blank" rel="noopener noreferrer">
+              <a href="https://en.wikipedia.org/wiki/Nallur_Kandaswamy_temple" target="_blank" rel="noopener noreferrer">
                 <img src="/Images/nallur.jpg" title="Nallur" />
               </a>
-              <a href="https://www.srilanka.travel/perahara" target="_blank" rel="noopener noreferrer">
+              <a href="https://kandyesalaperahera.com/" target="_blank" rel="noopener noreferrer">
                 <img src="/Images/perahara.jpg" title="Perahara" />
               </a>
-              <a href="https://www.srilanka.travel/anuradhapuraya" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.britannica.com/place/Anuradhapura-Sri-Lanka" target="_blank" rel="noopener noreferrer">
                 <img src="/Images/anuradhapuraya.jpg" title="Anuradhapuraya" />
               </a>
-              <a href="https://www.srilanka.travel/sigiriyaart" target="_blank" rel="noopener noreferrer">
+              <a href="https://en.m.wikipedia.org/wiki/Sigiriya" target="_blank" rel="noopener noreferrer">
                 <img src="/Images/sigiriyaart.jpg" title="Sigiriya Art" />
               </a>
-              <a href="https://www.srilanka.travel/polonnaruwa" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.ugaescapes.com/destinations/polonnaruwa.html" target="_blank" rel="noopener noreferrer">
                 <img src="/Images/polonnaruwa.jpg" title="Polonnaruwa" />
               </a>
-              <a href="https://www.srilanka.travel/dhambulla" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.holidify.com/places/dambulla/sightseeing-and-things-to-do.html" target="_blank" rel="noopener noreferrer">
                 <img src="/Images/dhambulla.jpg" title="Dhambulla" />
               </a>
             </div>
           </div>
         </div>
+
+        
       )}
+
+      
     </div>
   );
 };

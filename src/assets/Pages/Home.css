@@ -55,7 +55,7 @@
 
 .home-container {
 
-  width: 100%;
+  width: 100vw;
   background-color: black; /* Light background for visibility */
   padding: 10px 0;
 }
@@ -94,4 +94,40 @@ body {
   100% {
     transform: translateX(-100%); /* End outside the left edge */
   }
+}
+
+.cta-section {
+  text-align: center;
+  background:wheat ;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+.cta-section h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.cta-section p {
+  color: #555;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.cta-button {
+  background: orange;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: orange;
+  align-items: center;
 }

@@ -31,7 +31,7 @@ const Sign_up = () => {
       const response = await axios.post('http://localhost:3000/api/users/adduser'
 
 , formData);
-      if (response.status === 200) {
+      if (response.status === 201) {
         setMessage({ success: 'User registered successfully!', error: '' });
         setFormData({
           username: '',

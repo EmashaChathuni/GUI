@@ -14,8 +14,6 @@ export const addUser = async (request, response) => {
       });
     }
 
-    const hashedPassword = hashPassword(password);
-
     const existingUser = await user.findOne({ email });
     if (existingUser) {
       return response.status(400).json({success : false, message: "Email already in use" });
@@ -25,7 +23,7 @@ export const addUser = async (request, response) => {
       username,
       email,
       mnumber,
-      password: hashPassword,
+      password
     });
 
     return response.status(201).json({success : true, user : newUser});
@@ -102,14 +100,19 @@ export const login = async (request, response) => {
       return response.status(400).json({success : false, message: "Username or Password must be Filled" });
     }
 
-    const data = user.findOne({ username });
+    const data = await user.findOne({ username });
 
     if (!data) {
       return response.status(404).json({success : false,  message: "User is not Found" });
     }
 
-    if (verifyPassword(password, data.password)) {
+  
+    if (password == data.password) {
       return response.status(200).json({success : true, user : data});
+    }
+
+    if(!(password == data.password)){
+      return response.status(500).json({success : false, message : "Wrong Password"});
     }
 
   }

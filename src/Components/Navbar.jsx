@@ -14,9 +14,6 @@ const NavbarComponent = () => {
             <Link to="/">Home</Link>
           </li>
           <li className="Navbar-item">
-            <Link to="/about">About Us</Link>
-          </li>
-          <li className="Navbar-item">
             <Link to="/tour">Tour</Link>
           </li>
           <li className="Navbar-item">
@@ -26,14 +23,17 @@ const NavbarComponent = () => {
             <Link to="/sign_up">SignUp</Link>
           </li>
           <li className="Navbar-item">
-            <Link to="/services">Services</Link>
-          </li>
-          <li className="Navbar-item">
-            <Link to="/ContactUs">ContactUs</Link>
-          </li>
-          <li className="Navbar-item">
             <Link to="/TourGuides">TourGuides</Link>
           </li>
+          
+          <li className="Navbar-item">
+            <Link to="/about">About Us</Link>
+          </li>
+          <li className="Navbar-item">
+            <Link to="/services">Services</Link>
+          </li>
+          
+         
           
         </ul>
       </div>

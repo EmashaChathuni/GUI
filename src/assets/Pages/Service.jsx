@@ -1,74 +1,115 @@
 import React from "react";
-import './Service.css';
+import "./Service.css";
+import "./ContactUs.css";
 
 const Services = () => {
+  // Customer Reviews Data
+  const reviews = [
+    {
+      name: "John D.",
+      title: "Amazing Tour Experience",
+      review:
+        "The guide was very friendly and knowledgeable. The tour was well-organized and covered all the main attractions. Highly recommend!",
+      image: "/Images/Profile pictures/1.jpeg",
+    },
+    {
+      name: "Sarah P.",
+      title: "Great Service",
+      review:
+        "Everything was on time and the guide made sure everyone was comfortable. It was a memorable experience!",
+      image: "/Images/Profile pictures/4.jpeg",
+    },
+    {
+      name: "Mark T.",
+      title: "Would Definitely Book Again",
+      review:
+        "Excellent service and great value for money. The staff was very helpful and the tour exceeded my expectations.",
+      image: "/Images/Profile pictures/2.jpeg",
+    },
+    {
+      name: "Emily R.",
+      title: "Unforgettable Journey",
+      review:
+        "The tour was amazing! I discovered hidden gems and learned so much about the city. Will definitely recommend to friends.",
+      image: "/Images/Profile pictures/5.jpeg",
+    },
+    {
+      name: "Daniel K.",
+      title: "Top-notch Experience",
+      review:
+        "The entire tour was seamless and the guide was extremely knowledgeable. I would definitely join another tour with this company.",
+      image: "/Images/Profile pictures/3.jpeg",
+    },
+  ];
+
   return (
-    <div className="services">
-      
-      <h2>
-        Discover the best travel experiences with our curated services.
-      </h2>
-      <div className="service-icons">
-        <div className="icon">
-          <i className="fas fa-map-marker-alt"></i>
-          <p>Custom Destinations</p>
-        </div>
-        <div className="icon">
-          <i className="fas fa-heart"></i>
-          <p>Unforgettable Moments</p>
-        </div>
-        <div className="icon">
-          <i className="fas fa-dollar-sign"></i>
-          <p>Competitive Pricing</p>
-        </div>
-        <div className="icon">
-          <i className="fas fa-user"></i>
-          <p>Self Guide</p>
-        </div>
-        <div className="icon">
-          <i className="fas fa-clock"></i>
-          <p>24/7 Available</p>
-        </div>
-        <div className="icon">
-          <i className="fas fa-bus"></i>
-          <p>Transportation</p>
+    <div className="services-container">
+      {/* Services Section */}
+      <div className="services">
+        <h2>Discover the best travel experiences with our curated services.</h2>
+        <div className="service-icons">
+          <div className="icon">
+            <i className="fas fa-map-marker-alt"></i>
+            <p>Custom Destinations</p>
+          </div>
+          <div className="icon">
+            <i className="fas fa-heart"></i>
+            <p>Unforgettable Moments</p>
+          </div>
+          <div className="icon">
+            <i className="fas fa-dollar-sign"></i>
+            <p>Competitive Pricing</p>
+          </div>
+          <div className="icon">
+            <i className="fas fa-user"></i>
+            <p>Self Guide</p>
+          </div>
+          <div className="icon">
+            <i className="fas fa-clock"></i>
+            <p>24/7 Available</p>
+          </div>
+          <div className="icon">
+            <i className="fas fa-bus"></i>
+            <p>Transportation</p>
+          </div>
         </div>
       </div>
-      
-      <div className="special-offers">
-      
-      <div className="offer-box">
-       <img src="Images/couple.jpg"  />
-      </div>
-      <div className="offer-box">
-       <img src="Images/adventure.jpg" />
-      </div>
-    </div>
-      
-    <div className="tours-container">
-      <h2 className="tours-title">Why are Sri Lanka tours ideal for your vacation?</h2>
-      <p className="tours-description">
-        You may be looking for a tropical paradise, or you may hope to taste the European-chilly weather. Anything is possible in Sri Lanka. And that is why travelers all around the world fall in love with this magical island.
-        The experience is such that, generally, travelers top their first Sri Lanka tour with more amazing tours in this beautiful, yet adventurous landscape in the middle of one of the world’s most pristine oceans.
-      </p>
-      <ul className="tours-list">
-        <li>Home to many spectacular beaches with beautiful sunsets</li>
-        <li>Better known as the smiling nation where locals are friendly wherever you go</li>
-        <li>Travel from sunny beaches to misty mountains to lush jungles in just a couple of hours</li>
-        <li>Dream paradise for daring adventurers, couples, history buffs, nature lovers, and the list goes on</li>
-        <li>Different types of delightful and authentic Sri Lankan cuisine with exotic spices</li>
-      </ul>
-      <p className="tours-description">
-        Sri Lanka is a tourist destination which even the locals can’t get enough of. Get a firsthand Sri Lanka tour experience.
-      </p>
-    </div>
- 
 
+      {/* Customer Reviews Section */}
+      <div className="reviews">
+        <h2>What Our Customers Are Saying</h2>
+        <div className="reviews-container">
+          {reviews.map((review, index) => (
+            <div className="review-card" key={index}>
+              <img
+                src={review.image}
+                alt={review.name}
+                className="review-image"
+              />
+              <h3>{review.title}</h3>
+              <p>"{review.review}"</p>
+              <span>{review.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
 
+      {/* Contact Us Section */}
+      <div className="contactUs">
+        <div className="contact">
+          <h2>Contact Us</h2>
+          <form>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+        </div>
     </div>
-  
-     
   );
 };
 
 export default Services;
+
+

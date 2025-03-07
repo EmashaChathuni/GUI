@@ -1,5 +1,4 @@
 export const PORT = 3000;
-export const MONGOURL = 'mongodb+srv://sulithanb119:SpvjtGsyFmvCiCSt@cluster0.tea6s.mongodb.net/emasha-db?retryWrites=true&w=majority&appName=Cluster0';
-
-//SpvjtGsyFmvCiCSt
-//sulithanb119
+export const MONGOURL = 'mongodb+srv://EmashaChathuni:Emasha123@cluster0.uxpkz.mongodb.net/users';
+//EmashaChathuni
+//Emasha123
