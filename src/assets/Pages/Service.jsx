@@ -1,8 +1,39 @@
-import React from "react";
+import React, { useState } from "react"; // ✅ Import useState
+import axios from "axios";
 import "./Service.css";
 import "./ContactUs.css";
 
 const Services = () => {
+  // State for Contact Us Form
+  const [contact, setContact] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [responseMessage, setResponseMessage] = useState(""); // For success/error messages
+
+  // Handle form input changes
+  const handleChange = (e) => {
+    setContact({ ...contact, [e.target.name]: e.target.value });
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post("http://localhost:3000/api/contact", contact);
+
+      if (res.data.success) {
+        setResponseMessage("Message sent successfully!");
+        setContact({ name: "", email: "", message: "" }); // Clear form after submission
+      }
+    } catch (error) {
+      setResponseMessage("Error sending message. Please try again.");
+      console.error("Error:", error);
+    }
+  };
+
   // Customer Reviews Data
   const reviews = [
     {
@@ -98,18 +129,37 @@ const Services = () => {
       <div className="contactUs">
         <div className="contact">
           <h2>Contact Us</h2>
-          <form>
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <textarea placeholder="Your Message" required></textarea>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={contact.name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              value={contact.email}
+              onChange={handleChange}
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              value={contact.message}
+              onChange={handleChange}
+              required
+            ></textarea>
             <button type="submit">Submit</button>
           </form>
+          {responseMessage && <p className="response-message">{responseMessage}</p>}
         </div>
-        </div>
+      </div>
     </div>
   );
 };
 
 export default Services;
-
-
