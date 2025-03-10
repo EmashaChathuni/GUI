@@ -1,39 +1,9 @@
-import React, { useState } from "react"; // ✅ Import useState
-import axios from "axios";
+import React, {useState} from "react";
+import axios from 'axios';
 import "./Service.css";
 import "./ContactUs.css";
 
 const Services = () => {
-  // State for Contact Us Form
-  const [contact, setContact] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const [responseMessage, setResponseMessage] = useState(""); // For success/error messages
-
-  // Handle form input changes
-  const handleChange = (e) => {
-    setContact({ ...contact, [e.target.name]: e.target.value });
-  };
-
-  // Handle form submission
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const res = await axios.post("http://localhost:3000/api/contact", contact);
-
-      if (res.data.success) {
-        setResponseMessage("Message sent successfully!");
-        setContact({ name: "", email: "", message: "" }); // Clear form after submission
-      }
-    } catch (error) {
-      setResponseMessage("Error sending message. Please try again.");
-      console.error("Error:", error);
-    }
-  };
-
   // Customer Reviews Data
   const reviews = [
     {
@@ -72,6 +42,44 @@ const Services = () => {
       image: "/Images/Profile pictures/3.jpeg",
     },
   ];
+
+  const [formData, setFormData] = useState({
+    name:'',
+    email:'',
+    message:'',
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:3000/api/contact/add', formData);
+      
+      if (response.status === 201) {
+        setMessage({ success: 'User registered successfully!', error: '' });
+        setFormData({
+          name:'',
+          email:'',
+          message:'',
+        });
+
+	
+      }
+
+    } catch (err) {
+      setMessage({
+        success: '',
+        error: err.response?.data?.message || 'Something went wrong!',
+      });
+    }
+  };
+
 
   return (
     <div className="services-container">
@@ -130,34 +138,36 @@ const Services = () => {
         <div className="contact">
           <h2>Contact Us</h2>
           <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={contact.name}
-              onChange={handleChange}
-              required
+            <input 
+            type="text" 
+            placeholder="Your Name" 
+            id = "name"
+            name = "name"
+            value = {formData.name}
+            onChange={handleChange}
+            required 
             />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={contact.email}
-              onChange={handleChange}
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              value={contact.message}
-              onChange={handleChange}
-              required
-            ></textarea>
+            <input 
+            type="email" 
+            placeholder="Your Email" 
+            id = "email"
+            name = "email"
+            value = {formData.email}
+            onChange={handleChange}
+            required />
+
+            <textarea 
+            placeholder="Your Message" 
+            id = "message"
+            name = "message"
+            value = {formData.message}
+            onChange={handleChange}
+            required>
+            </textarea>
             <button type="submit">Submit</button>
           </form>
-          {responseMessage && <p className="response-message">{responseMessage}</p>}
         </div>
-      </div>
+        </div>
     </div>
   );
 };
