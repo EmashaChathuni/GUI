@@ -66,7 +66,7 @@ const Tour = () => {
   ];
 
   const Waterfalls = [
-    { name: 'Diyaluma Falls', url: 'https://en.m.wikipedia.org/wiki/Diyaluma_Falls' },
+    { name: 'Diyaluma Falls', url: 'https://juliasdaysoff.com/sri-lanka/diyaluma-falls-sri-lanka/' },
     { name: 'Bambarakanda Falls', url: 'https://en.m.wikipedia.org/wiki/Bambarakanda_Falls' },
     { name: 'Dunhinda Falls', url: 'https://en.m.wikipedia.org/wiki/Dunhinda_Falls' },
     { name: 'Ravana Falls', url: 'https://en.m.wikipedia.org/wiki/Ravana_Falls' },
@@ -75,7 +75,7 @@ const Tour = () => {
   ];
 
   const Mountains = [
-    { name: 'Adam’s Peak', url: 'https://en.m.wikipedia.org/wiki/Adam%27s_Peak' },
+    { name: 'Adam’s Peak', url: 'https://www.teardrop-hotels.com/blog/a-complete-guide-to-climbing-adams-peak-in-sri-lanka/' },
     { name: 'Pidurutalagala', url: 'https://en.m.wikipedia.org/wiki/Pidurutalagala' },
     { name: 'Kirigalpotta', url: 'https://en.m.wikipedia.org/wiki/Kirigalpotta' },
     { name: 'Thotupola Kanda', url: 'https://en.m.wikipedia.org/wiki/Totapolakanda' },

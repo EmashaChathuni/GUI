@@ -14,14 +14,14 @@ const Home = () => {
       <Container>
         <Row>
           <Col>
-            {/* Background Video */}
+            
             <video className="background-video" autoPlay loop muted>
               <source src={srilanka} type="video/mp4" />
             </video>
             
-            {/* Overlay */}
+            
             <div className="overlay"></div>
-            {/* Content Section */}
+            
             <div className="content">
               <h1>Welcome </h1>
               <h2>Explore Sri Lanka with Expert Guide</h2>
